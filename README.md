@@ -43,14 +43,11 @@ stow .
 # Wispro
 ```bash
 sudo pacman -S element-desktop
-
-# AutoEnv
-curl -#fLo- 'https://raw.githubusercontent.com/hyperupcall/autoenv/main/scripts/install.sh' | sh
 ```
 
 ## NVM
 ```bash
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
+PROFILE=/dev/null bash -c 'curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash'
 
 npm install --global yarn
 ```
@@ -68,9 +65,6 @@ sudo pacman -S --noconfirm --needed \
 
 # Install Rbenv
 git clone https://github.com/rbenv/rbenv.git ~/.rbenv
-
-# Load on start
-echo 'eval "$(~/.rbenv/bin/rbenv init - bash)"' >> ~/.bashrc
 
 # Ruby-build plugin
 git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build

@@ -4,3 +4,6 @@
 [submodule ".tmux/plugins/tmp"]
 	path = .tmux/plugins/tmp
 	url = https://github.com/tmux-plugins/tpm
+[submodule ".autoenv"]
+	path = .autoenv
+	url = https://github.com/hyperupcall/autoenv
