@@ -4,7 +4,7 @@ bold = { family = "JetBrains Mono Nerd Font", style = "Bold" }
 italic = { family = "JetBrains Mono Nerd Font", style = "Italic" }
 
 [window]
-opacity = 0.6
+opacity = 0.8
 
 # -----------------------------------------------------------------------------
 # TokyoNight Alacritty Colors

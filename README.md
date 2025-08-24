@@ -26,7 +26,10 @@ sudo pacman -S --noconfirm \
   nautilus \
   docker \
   docker-compose \
-  fzf
+  fzf \
+  less \
+  pavucontrol \
+  hyprpaper
 
 # Screen-sharing
 sudo pacman -S --noconfirm \
@@ -37,19 +40,33 @@ sudo pacman -S --noconfirm \
 sudo pacman -S --noconfirm \
   ripgrep
 
+
 stow .
 ```
 
-# Wispro
+## YAY
 ```bash
-sudo pacman -S element-desktop
+cd /tmp
+git clone https://aur.archlinux.org/yay-bin.git
+cd yay-bin
+makepkg -si --noconfirm
 ```
+
 
 ## NVM
 ```bash
 PROFILE=/dev/null bash -c 'curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash'
 
 npm install --global yarn
+
+# Typescript lsp
+npm install -g typescript typescript-language-server
+
+# Eslint
+npm install -g vscode-langservers-extracted
+
+# Docker
+npm install -g dockerfile-language-server-nodejs
 ```
 
 ## Ruby + RBENV
@@ -66,8 +83,20 @@ sudo pacman -S --noconfirm --needed \
 # Install Rbenv
 git clone https://github.com/rbenv/rbenv.git ~/.rbenv
 
+# gem install ruby-lsp
+
+
 # Ruby-build plugin
 git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build
+```
+
+# Wispro
+```bash
+sudo pacman -S element-desktop
+
+yay -S gcc12
+
+CC=gcc-12 rbenv install 2.7.6
 ```
 
 ## Docker post-install
