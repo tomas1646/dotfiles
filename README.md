@@ -33,7 +33,11 @@ sudo pacman -S --noconfirm \
   htop \
   mako \
   iwd \
-  impala
+  impala \
+  postgresql-libs \
+  libvips \
+  noto-fonts \
+  noto-fonts-emoji
 
 
 # Screen-sharing
@@ -53,6 +57,10 @@ gsettings set org.gnome.desktop.interface icon-theme "Yaru-blue"
 yay -S waybar
 
 stow .
+
+# Install tmux plugins
+
+~/.tmux/plugins/tpm/bin/install_plugins
 ```
 
 ## YAY
@@ -105,6 +113,7 @@ git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-b
 ```bash
 sudo pacman -S element-desktop
 
+## Esto demora mucho
 yay -S gcc12
 
 CC=gcc-12 rbenv install 2.7.6
@@ -119,7 +128,3 @@ sudo systemctl deamon-reload
 
 sudo usermod -aG docker $USER
 ```
-
-
-## NOTES:
-* Install tmux plugins: enter Tmux ``Super + I``
