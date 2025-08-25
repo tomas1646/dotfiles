@@ -55,7 +55,7 @@ gsettings set org.gnome.desktop.interface gtk-theme "Adwaita-dark"
 gsettings set org.gnome.desktop.interface icon-theme "Yaru-blue"
 
 
-yay -S waybar
+yay -S waybar postman-bin
 
 stow .
 
