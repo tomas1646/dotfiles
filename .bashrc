@@ -13,13 +13,11 @@ parse_git_branch() {
 }
 PS1="\u \W\[\033[32m\]\$(parse_git_branch)\[\033[00m\] $ "
 
-
 alias gst='git status'
 alias gco='git checkout'
 alias gcb='git checkout -b'
 alias ggpull='git pull origin $parse_git_branch'
 alias ggpush='git push origin $parse_git_branch'
-
 
 # Custom scripts
 export PATH="$HOME/.bin:$PATH"

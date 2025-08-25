@@ -29,7 +29,12 @@ sudo pacman -S --noconfirm \
   fzf \
   less \
   pavucontrol \
-  hyprpaper
+  hyprpaper \
+  htop \
+  mako \
+  iwd \
+  impala
+
 
 # Screen-sharing
 sudo pacman -S --noconfirm \
@@ -40,6 +45,12 @@ sudo pacman -S --noconfirm \
 sudo pacman -S --noconfirm \
   ripgrep
 
+gsettings set org.gnome.desktop.interface color-scheme "prefer-dark"
+gsettings set org.gnome.desktop.interface gtk-theme "Adwaita-dark"
+gsettings set org.gnome.desktop.interface icon-theme "Yaru-blue"
+
+
+yay -S waybar
 
 stow .
 ```
