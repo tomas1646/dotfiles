@@ -36,6 +36,7 @@ sudo pacman -S --noconfirm \
   impala \
   postgresql-libs \
   libvips \
+  imagemagick \
   noto-fonts \
   noto-fonts-emoji
 
