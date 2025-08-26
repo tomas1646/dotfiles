@@ -12,9 +12,15 @@ alias ls='ls -l --color=auto'
 alias grep='grep --color=auto'
 
 parse_git_branch() {
-    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'
 }
-PS1="\u \W\[\033[32m\]\$(parse_git_branch)\[\033[00m\] $ "
+
+ARROW=$'\uf0a9 '
+BOLD="\e[1m"
+BLUE="\[$(tput setaf 12)\]"
+ORANGE="\[$(tput setaf 3)\]"
+RESET_COLOR="\[$(tput sgr0)\]"
+PS1="${BOLD}${BLUE}\w${RESET_COLOR} ${BOLD}${ORANGE}\$(parse_git_branch) $ARROW ${RESET_COLOR}"
 
 alias gst='git status'
 alias gco='git checkout'
@@ -54,6 +60,11 @@ bind '"\e[D": backward-char'
 
 # Custom scripts
 export PATH="$HOME/.bin:$PATH"
+
+# Bash autocomplete
+# Use bash-completion, if available
+[[ $PS1 && -f /usr/share/bash-completion/bash_completion ]] && \
+    . /usr/share/bash-completion/bash_completion
 
 # Tmux-sessionizer
 bind -x '"\C-f":"tmux-sessionizer"'

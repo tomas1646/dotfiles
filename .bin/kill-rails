@@ -1,0 +1,7 @@
+#! /bin/bash
+
+rails_pid=$(lsof -i :3000 -t)
+
+if [ -n "$rails_pid" ]; then
+  sudo kill -9 $rails_pid
+fi

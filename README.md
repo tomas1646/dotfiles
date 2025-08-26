@@ -38,7 +38,8 @@ sudo pacman -S --noconfirm \
   libvips \
   imagemagick \
   noto-fonts \
-  noto-fonts-emoji
+  noto-fonts-emoji \
+  bash-completion
 
 
 # Screen-sharing
