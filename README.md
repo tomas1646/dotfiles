@@ -39,7 +39,9 @@ sudo pacman -S --noconfirm \
   imagemagick \
   noto-fonts \
   noto-fonts-emoji \
-  bash-completion
+  bash-completion \
+  lua-language-server \
+  lsof
 
 
 # Screen-sharing
@@ -51,12 +53,15 @@ sudo pacman -S --noconfirm \
 sudo pacman -S --noconfirm \
   ripgrep
 
-gsettings set org.gnome.desktop.interface color-scheme "prefer-dark"
 gsettings set org.gnome.desktop.interface gtk-theme "Adwaita-dark"
-gsettings set org.gnome.desktop.interface icon-theme "Yaru-blue"
+gsettings set org.gnome.desktop.interface color-scheme "prefer-dark"
 
-
-yay -S waybar postman-bin
+yay -S --noconfirm \
+  waybar \
+  postman-bin \
+  gnome-themes-extra \
+  hyprshot
+       
 
 stow .
 
@@ -88,6 +93,9 @@ npm install -g vscode-langservers-extracted
 
 # Docker
 npm install -g dockerfile-language-server-nodejs
+
+# Prettier
+npm install -g prettier
 ```
 
 ## Ruby + RBENV
