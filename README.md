@@ -41,7 +41,8 @@ sudo pacman -S --noconfirm \
   noto-fonts-emoji \
   bash-completion \
   lua-language-server \
-  lsof
+  lsof \
+  wiremix
 
 
 # Screen-sharing
@@ -60,7 +61,8 @@ yay -S --noconfirm \
   waybar \
   postman-bin \
   gnome-themes-extra \
-  hyprshot
+  hyprshot \
+  spotify
        
 
 stow .

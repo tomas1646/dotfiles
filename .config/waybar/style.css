@@ -31,6 +31,7 @@
 #tray,
 #cpu,
 #battery,
+#language,
 #network,
 #bluetooth,
 #pulseaudio,
@@ -40,6 +41,9 @@
   margin: 0 7.5px;
 }
 
+#memory {
+  padding-left: 8px;
+}
 
 #cpu.warning,
 #memory.warning {
