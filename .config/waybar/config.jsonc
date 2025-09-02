@@ -34,7 +34,7 @@
   },
   "memory": {
     "format": "RAM: {percentage}%",
-    "on-click": "alacritty -e htop",
+    "on-click": "alacritty -e btop",
     "states": {
       "warning": 80,
     },
