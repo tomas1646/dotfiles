@@ -40,8 +40,10 @@ alias ggpush='git push origin $parse_git_branch'
 
 ## Wispro
 alias wcsw="cd ~/wispro/wispro_cloud
+yarn install
 bundle exec vite dev"
 alias wcsr="cd ~/wispro/wispro_cloud
+bundle install
 LOGS_TO_STDOUT=1 LOG_LEVEL=debug rails s"
 alias wcsrlocal="cd ~/wispro/wispro_cloud
 LOGS_TO_STDOUT=1 LOG_LEVEL=debug rails s -b 0.0.0.0 -p 3000"
