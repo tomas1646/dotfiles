@@ -44,7 +44,8 @@ sudo pacman -S --noconfirm \
   lsof \
   wiremix \
   libreoffice \
-  btop
+  btop \
+  udisks2
 
 # IWD deamon (impala)
 sudo systemctl start iwd.service
