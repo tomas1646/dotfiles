@@ -1,3 +1,4 @@
 .bin/kubectl
 .bin/aws-iam-authenticator
 .bin/wispod
+.tmux/plugins
