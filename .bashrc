@@ -35,8 +35,8 @@ PS1="${BOLD}${BLUE}\w${RESET_COLOR} ${BOLD}${ORANGE}\$(parse_git_branch) \$(prin
 alias gst='git status'
 alias gco='git checkout'
 alias gcb='git checkout -b'
-alias ggpull='git pull origin $parse_git_branch'
-alias ggpush='git push origin $parse_git_branch'
+alias ggpull='git pull origin $(parse_git_branch)'
+alias ggpush='git push origin $(parse_git_branch)'
 
 ## Wispro
 alias wcsw="cd ~/wispro/wispro_cloud

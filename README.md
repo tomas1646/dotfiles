@@ -79,10 +79,11 @@ stow .
 
 ## YAY
 ```bash
-cd /tmp
+pushd /tmp
 git clone https://aur.archlinux.org/yay-bin.git
 cd yay-bin
 makepkg -si --noconfirm
+popd
 ```
 
 
@@ -136,7 +137,7 @@ yay -S gcc12
 CC=gcc-12 rbenv install 2.7.6
 
 ## Kubectl
-cd /tmp
+pushd /tmp
 curl -O https://s3.us-west-2.amazonaws.com/amazon-eks/1.33.3/2025-08-03/bin/linux/amd64/kubectl
 chmod +x ./kubectl
 cp ./kubectl $HOME/.bin/kubectl
@@ -150,13 +151,11 @@ curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip
 unzip awscliv2.zip
 sudo ./aws/install
 
-cd
+popd
 ```
 
 ## Docker post-install
 ```bash
-sudo systemctl enable docker.service
-
 sudo systemctl enable docker.service
 sudo systemctl deamon-reload
 
