@@ -14,5 +14,7 @@ sudo pacman -S --noconfirm --needed \
 # Install Rbenv
 git clone https://github.com/rbenv/rbenv.git ~/.rbenv
 
+eval "$(~/.rbenv/bin/rbenv init - bash)"
+
 # Ruby-build plugin
 git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build

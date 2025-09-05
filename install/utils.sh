@@ -9,4 +9,5 @@ sudo pacman -S --noconfirm \
   less \
   lsof \
   stow \
+  tmux \
   udisks2
