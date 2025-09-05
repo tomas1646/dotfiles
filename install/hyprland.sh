@@ -12,5 +12,3 @@ sudo pacman -S --noconfirm \
 
 yay -S --noconfirm \
   hyprshot
-
-rm -rf ~/.config/hypr
