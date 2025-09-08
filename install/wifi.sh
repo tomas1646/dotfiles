@@ -5,4 +5,4 @@ sudo pacman -S --noconfirm \
   impala
 
 # IWD deamon (impala)
-sudo systemctl start iwd.service
+sudo systemctl enable iwd.service

@@ -1,7 +1,9 @@
 #!/bin/bash
 
 sudo pacman -S --noconfirm \
+  hypridle \
   hyprland \
+  hyprlock \
   hyprpaper
 
 # Screen-sharing

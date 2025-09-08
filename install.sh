@@ -10,7 +10,7 @@ source $INSTALL_DIR/utils.sh
 source $INSTALL_DIR/yay.sh
 
 rm -rf ~/.bashrc
-stow .
+stow --no-folding .
 source ~/.bashrc
 
 source $INSTALL_DIR/apps.sh
@@ -24,6 +24,6 @@ source $INSTALL_DIR/wifi.sh
 source $INSTALL_DIR/wispro.sh
 
 source ~/.bashrc
-stow .
+stow --no-folding .
 
 sudo pacman -Syu --noconfirm

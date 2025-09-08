@@ -52,6 +52,7 @@ LOGS_TO_STDOUT=1 LOG_LEVEL=debug bundle exec sidekiq"
 alias wds='cd ~/wispro/docker_services && docker compose up -d --remove-orphans rabbit sentry postgres redis influxdb redis_7'
 alias wdstop="cd ~/wispro/docker_services
 docker compose stop"
+alias wispod="bash ~/wispro/support/autoPodGenerator/wispro.sh"
 
 # Opciones de Readline
 bind 'set completion-ignore-case on'
