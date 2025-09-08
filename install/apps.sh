@@ -1,7 +1,6 @@
 #!/bin/bash
 
 sudo pacman -S --noconfirm \
-  blueberry \
   btop \
   discord \
   rofi \
@@ -9,7 +8,8 @@ sudo pacman -S --noconfirm \
   nautilus \
   pavucontrol \
   vivaldi \
-  wiremix
+  wiremix \
+  bluetui
 
 yay -S --noconfirm \
   postman-bin \

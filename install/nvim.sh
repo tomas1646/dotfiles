@@ -4,5 +4,4 @@ sudo pacman -S --noconfirm \
   fzf \
   lua-language-server \
   nvim \
-  ripgrep \
-  xclip
+  ripgrep
