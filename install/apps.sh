@@ -1,15 +1,17 @@
 #!/bin/bash
 
 sudo pacman -S --noconfirm \
+  bluetui \
   btop \
   discord \
-  rofi \
   libreoffice \
+  mpv \
   nautilus \
+  obs-studio \
   pavucontrol \
+  rofi \
   vivaldi \
-  wiremix \
-  bluetui
+  wiremix
 
 yay -S --noconfirm \
   postman-bin \

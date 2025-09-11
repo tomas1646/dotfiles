@@ -4,6 +4,10 @@ sudo pacman -S --noconfirm \
   element-desktop \
   unzip
 
+yay -S --noconfirm \
+  ngrok \
+  android-studio
+
 # NOTE: Esto tarda mucho tiempo
 # yay -S gcc12
 #
@@ -26,3 +30,10 @@ unzip awscliv2.zip
 sudo ./aws/install
 
 popd
+
+# Android-Studio
+mise use -g java@openjdk-21
+mise use -g java@21
+
+# .ruby-version
+mise settings add idiomatic_version_file_enable_tools ruby

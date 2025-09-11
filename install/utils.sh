@@ -9,6 +9,7 @@ sudo pacman -S --noconfirm \
   htop \
   less \
   lsof \
+  mise \
   stow \
   tmux \
   udisks2

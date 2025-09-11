@@ -7,6 +7,8 @@
 
 export EDITOR="nvim"
 export SUDO_EDITOR="$EDITOR"
+export ANDROID_HOME=$HOME/Android/Sdk
+export EDGE_PATH=/usr/bin/vivaldi
 
 alias ls='ls -l --color=auto'
 alias grep='grep --color=auto'
@@ -45,14 +47,18 @@ bundle exec vite dev"
 alias wcsr="cd ~/wispro/wispro_cloud
 bundle install
 LOGS_TO_STDOUT=1 LOG_LEVEL=debug rails s"
-alias wcsrlocal="cd ~/wispro/wispro_cloud
+alias wcsrl="cd ~/wispro/wispro_cloud
 LOGS_TO_STDOUT=1 LOG_LEVEL=debug rails s -b 0.0.0.0 -p 3000"
 alias wcss="cd ~/wispro/wispro_cloud
 LOGS_TO_STDOUT=1 LOG_LEVEL=debug bundle exec sidekiq"
-alias wds='cd ~/wispro/docker_services && docker compose up -d --remove-orphans rabbit sentry postgres redis influxdb redis_7'
-alias wdstop="cd ~/wispro/docker_services
-docker compose stop"
+alias wds='pushd ~/wispro/docker_services
+docker compose up -d --remove-orphans rabbit sentry postgres redis influxdb redis_7
+popd'
+alias wdstop="pushd ~/wispro/docker_services
+docker compose stop
+popd"
 alias wispod="bash ~/wispro/support/autoPodGenerator/wispro.sh"
+alias era="npx expo run:android"
 
 # Opciones de Readline
 bind 'set completion-ignore-case on'
@@ -92,3 +98,7 @@ eval "$(~/.rbenv/bin/rbenv init - bash)"
 
 ## AUTOENV
 source ~/.autoenv/activate.sh
+
+## Mise
+eval "$(mise activate bash)"
+
