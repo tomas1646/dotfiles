@@ -28,7 +28,7 @@ print_git_changes_to_commit() {
 }
 
 ARROW=$'\uf0a9 '
-BOLD="\e[1m"
+BOLD="\[\e[1m\]"
 BLUE="\[$(tput setaf 12)\]"
 ORANGE="\[$(tput setaf 3)\]"
 RESET_COLOR="\[$(tput sgr0)\]"
@@ -59,23 +59,6 @@ docker compose stop
 popd"
 alias wispod="bash ~/wispro/support/autoPodGenerator/wispro.sh"
 alias era="npx expo run:android"
-
-# Opciones de Readline
-bind 'set completion-ignore-case on'
-bind 'set show-all-if-ambiguous on'
-bind 'set show-all-if-unmodified on'
-# Do not autocomplete hidden files unless the pattern explicitly begins with a dot
-bind 'set match-hidden-files off'
-# If there are more than 200 possible completions for a word, ask to show them all
-bind 'set completion-query-items 200'
-# Coloring for Bash 4 tab completions.
-bind 'set colored-stats on'
-
-# Keybindings
-bind '"\e[A": history-search-backward'
-bind '"\e[B": history-search-forward'
-bind '"\e[C": forward-char'
-bind '"\e[D": backward-char'
 
 # Custom scripts
 export PATH="$HOME/.bin:$PATH"

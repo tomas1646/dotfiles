@@ -6,7 +6,6 @@ sudo pacman -S --noconfirm \
   brightnessctl \
   curl \
   git \
-  htop \
   less \
   lsof \
   mise \
