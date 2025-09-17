@@ -4,7 +4,8 @@ sudo pacman -S --noconfirm \
   hypridle \
   hyprland \
   hyprlock \
-  hyprpaper
+  hyprpaper \
+  hyprpicker
 
 # Screen-sharing
 sudo pacman -S --noconfirm \
