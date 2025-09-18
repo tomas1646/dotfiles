@@ -5,6 +5,7 @@ sudo pacman -S --noconfirm \
   bash-completion \
   brightnessctl \
   curl \
+  dmidecode \
   git \
   less \
   lsof \
