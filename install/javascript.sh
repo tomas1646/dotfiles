@@ -17,6 +17,7 @@ npm install -g typescript typescript-language-server
 
 # Eslint
 npm install -g vscode-langservers-extracted
+npm install -g eslint_d
 
 # Docker LSP
 npm install -g dockerfile-language-server-nodejs
