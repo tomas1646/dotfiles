@@ -10,6 +10,7 @@ sudo pacman -S --noconfirm \
   less \
   lsof \
   mise \
+  satty \
   stow \
   tmux \
   udisks2
