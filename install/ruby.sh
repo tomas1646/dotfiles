@@ -4,6 +4,7 @@ sudo pacman -S --noconfirm --needed \
   base-devel \
   imagemagick \
   libffi \
+  libheif \
   libvips \
   libyaml \
   openssl \
