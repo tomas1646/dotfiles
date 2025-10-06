@@ -2,6 +2,7 @@
 
 sudo pacman -S --noconfirm \
   docker \
+  docker-buildx \
   docker-compose
 
 sudo systemctl enable docker.service
