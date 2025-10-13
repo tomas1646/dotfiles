@@ -8,9 +8,10 @@ sudo pacman -S --noconfirm --needed \
   libvips \
   libyaml \
   openssl \
+  openssl-1.1 \
   postgresql-libs \
   rust \
-  zlib \
+  zlib
 
 # Install Rbenv
 git clone https://github.com/rbenv/rbenv.git ~/.rbenv
