@@ -18,3 +18,7 @@ alias wdstop="pushd ~/wispro/docker_services && docker compose stop && popd"
 alias wispod="bash ~/wispro/support/autoPodGenerator/wispro.sh"
 alias era="npx expo run:android"
 alias erd="npx expo start --dev-client -c"
+
+## Nuvia
+alias nds="pushd ~/nuvia/docker-containers && docker compose up -d && popd"
+alias ndstop="pushd ~/nuvia/docker-containers && docker compose stop && popd"
