@@ -21,7 +21,7 @@ source $INSTALL_DIR/nvim.sh
 source $INSTALL_DIR/ruby.sh
 source $INSTALL_DIR/ui.sh
 source $INSTALL_DIR/wifi.sh
-source $INSTALL_DIR/wispro.sh
+# source $INSTALL_DIR/wispro.sh
 
 source ~/.bashrc
 stow --no-folding .
