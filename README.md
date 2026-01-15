@@ -12,7 +12,7 @@ git clone https://github.com/tomas1646/dotfiles.git ~/dotfiles
 
 cd ~/dotfiles
 
-sudo bash install.sh
+bash install.sh
 ```
 
 ## TODO
