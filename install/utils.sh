@@ -5,6 +5,8 @@ sudo pacman -S --noconfirm \
   bash-completion \
   brightnessctl \
   curl \
+  cups \
+  cups-pdf \
   dmidecode \
   git \
   less \
@@ -14,3 +16,5 @@ sudo pacman -S --noconfirm \
   stow \
   tmux \
   udisks2
+
+sudo systemctl enable cups.service
