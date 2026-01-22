@@ -15,6 +15,9 @@ npm install --global yarn
 # Typescript lsp
 npm install -g typescript typescript-language-server
 
+# Astro LSP
+npm install -g @astrojs/language-server
+
 # Eslint
 npm install -g vscode-langservers-extracted
 npm install -g eslint_d
