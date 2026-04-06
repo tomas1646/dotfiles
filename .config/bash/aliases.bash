@@ -7,6 +7,7 @@ alias gcb='git checkout -b'
 alias ggpull='git pull origin $(parse_git_branch)'
 alias ggpush='git push origin $(parse_git_branch)'
 alias n='nvim .'
+alias t='tmux a'
 
 ## Wispro
 alias wcsw="cd ~/wispro/wispro_cloud && yarn install && bundle exec vite dev"
