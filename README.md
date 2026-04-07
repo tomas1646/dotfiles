@@ -16,5 +16,4 @@ bash install.sh
 ```
 
 ## TODO
-- [ ] Sacar .autoenv de .gitmodules
 - [ ] Pasos archinstall
