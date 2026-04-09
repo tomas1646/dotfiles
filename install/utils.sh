@@ -4,9 +4,9 @@ sudo pacman -S --noconfirm \
   alacritty \
   bash-completion \
   brightnessctl \
-  curl \
   cups \
   cups-pdf \
+  curl \
   dmidecode \
   git \
   less \

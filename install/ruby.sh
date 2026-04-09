@@ -13,7 +13,10 @@ sudo pacman -S --noconfirm --needed \
   rust \
   zlib
 
+mise settings ruby.compile=false
 mise use -g ruby@3.4.1
+
+source ~/.bashrc
 
 gem install rails
 

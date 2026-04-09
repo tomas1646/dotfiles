@@ -2,6 +2,8 @@
 
 mise use -g node@24.14.0
 
+source ~/.bashrc
+
 # Yarn
 npm install --global yarn
 
