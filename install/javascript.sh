@@ -4,6 +4,8 @@ mise use -g node@24.14.0
 
 source ~/.bashrc
 
+sudo pacman -S --noconfirm tree-sitter-cli
+
 # Yarn
 npm install --global yarn
 

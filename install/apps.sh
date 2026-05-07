@@ -8,6 +8,7 @@ sudo pacman -S --noconfirm \
   mpv \
   nautilus \
   obs-studio \
+  okular \
   pavucontrol \
   rofi \
   vivaldi \
