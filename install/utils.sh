@@ -2,6 +2,7 @@
 
 sudo pacman -S --noconfirm \
   alacritty \
+  base-devel \
   bash-completion \
   brightnessctl \
   cups \
@@ -15,6 +16,7 @@ sudo pacman -S --noconfirm \
   satty \
   stow \
   tmux \
-  udisks2
+  udisks2 \
+  fastfetch
 
 sudo systemctl enable cups.service

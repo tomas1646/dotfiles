@@ -16,7 +16,7 @@ sudo pacman -S --noconfirm --needed \
 mise settings ruby.compile=false
 mise use -g ruby@3.4.1
 
-yay -S wkhtmltopdf
+# yay -S wkhtmltopdf
 
 source ~/.bashrc
 
