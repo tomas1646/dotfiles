@@ -9,14 +9,15 @@ sudo pacman -S --noconfirm \
   cups-pdf \
   curl \
   dmidecode \
+  fastfetch \
   git \
   less \
   lsof \
   mise \
+  nvidia-open \
   satty \
   stow \
   tmux \
-  udisks2 \
-  fastfetch
+  udisks2
 
 sudo systemctl enable cups.service

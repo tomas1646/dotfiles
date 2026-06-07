@@ -15,5 +15,9 @@ cd ~/dotfiles
 bash install.sh
 ```
 
+## Nvidia
+
+https://wiki.hypr.land/0.45.0/Nvidia/
+
 ## TODO
 - [ ] Pasos archinstall

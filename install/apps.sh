@@ -3,6 +3,7 @@
 sudo pacman -S --noconfirm \
   bluetui \
   btop \
+  calibre \
   discord \
   libreoffice \
   mpv \
