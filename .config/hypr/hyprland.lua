@@ -259,6 +259,11 @@ hl.device({
   sensitivity = -0.5,
 })
 
+hl.config({
+  cursor = {
+    hide_on_key_press = true
+  }
+})
 
 ---------------------
 ---- KEYBINDINGS ----
