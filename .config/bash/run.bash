@@ -6,3 +6,4 @@
 ## Mise
 eval "$(mise activate bash)"
 
+export PATH="$HOME/.local/bin:$PATH"

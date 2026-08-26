@@ -18,22 +18,24 @@
 -- monitor=eDP-1,prefered,auto,1.2
 -- monitor=,preferred,auto,1
 
-hl.monitor({
-  output   = "eDP-1",
-  mode     = "preferred",
-  position = "auto",
-  scale    = 1.2,
-})
 
-hl.monitor({
-  output   = "",
-  mode     = "preferred",
-  position = "auto",
-  scale    = "auto"
-})
+hl.monitor({ output = "", mode = "preferred", position = "auto", scale = "auto" })
 
-hl.bind("switch:on:Lid Switch", hl.dsp.exec_cmd('hyprctl keyword monitor "eDP-1, disable"'))
-hl.bind("switch:off:Lid Switch", hl.dsp.exec_cmd('hyprctl keyword monitor "eDP-1, preferred, auto, 1.2"'))
+local function is_hdmi_connected()
+  local f = io.open("/sys/class/drm/card0-HDMI-A-1/status", "r")
+  if f then
+    local status = f:read("*l")
+    f:close()
+    return status == "connected"
+  end
+  return false
+end
+
+if is_hdmi_connected() then
+  hl.monitor({ output = "eDP-1", disabled = true })
+else
+  hl.monitor({ output = "eDP-1", mode = "preferred", position = "auto", scale = 1.2 })
+end
 
 ---------------------
 ---- MY PROGRAMS ----
@@ -43,7 +45,6 @@ hl.bind("switch:off:Lid Switch", hl.dsp.exec_cmd('hyprctl keyword monitor "eDP-1
 local terminal    = "alacritty"
 local fileManager = "nautilus"
 local menu        = "rofi -show run"
-
 
 -------------------
 ---- AUTOSTART ----
@@ -233,7 +234,7 @@ hl.config({
     kb_layout    = "us,latam",
     kb_variant   = "",
     kb_model     = "",
-    kb_options   = "grp:win_space_toggle",
+    kb_options   = "grp:win_space_toggle,lv3:ralt_switch",
     kb_rules     = "",
 
     follow_mouse = 1,
@@ -346,7 +347,6 @@ hl.bind("XF86AudioPlay", hl.dsp.exec_cmd("playerctl play-pause"), { locked = tru
 hl.bind("XF86AudioPrev", hl.dsp.exec_cmd("playerctl previous"), { locked = true })
 
 -- # Resize submap
--- bind = $mainMod, R, submap, resize
 hl.bind(mainMod .. " + R", hl.dsp.submap("resize"))
 
 hl.define_submap("resize", function()
@@ -360,6 +360,19 @@ hl.define_submap("resize", function()
   hl.bind("escape", hl.dsp.submap("reset"))
 end)
 
+local binds = { h = 'Left', j = 'Down', k = 'Up', l = 'Right' }
+
+for key, direction in pairs(binds) do
+  -- ALT + hjkl (vim navigation)
+  hl.bind("MOD5 + " .. key, hl.dsp.send_shortcut({ mods = "", key = direction }), { repeating = true })
+  -- Mover por palabras (CTRL)
+  hl.bind("CTRL + MOD5 + " .. key, hl.dsp.send_shortcut({ mods = "CTRL", key = direction }), { repeating = true })
+  -- Seleccionar texto (SHIFT)
+  hl.bind("SHIFT + MOD5 + " .. key, hl.dsp.send_shortcut({ mods = "SHIFT", key = direction }), { repeating = true })
+  -- Seleccionar por palabras (CTRL + SHIFT)
+  hl.bind("CTRL + SHIFT + MOD5 + " .. key, hl.dsp.send_shortcut({ mods = "CTRL SHIFT", key = direction }),
+    { repeating = true })
+end
 --------------------------------
 ---- WINDOWS AND WORKSPACES ----
 --------------------------------

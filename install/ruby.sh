@@ -8,7 +8,6 @@ sudo pacman -S --noconfirm --needed \
   libvips \
   libyaml \
   openssl \
-  openssl-1.1 \
   postgresql-libs \
   rust \
   zlib

@@ -1,6 +1,7 @@
 #!/bin/bash
 
 sudo pacman -S --noconfirm \
+  anki \
   bluetui \
   btop \
   calibre \
