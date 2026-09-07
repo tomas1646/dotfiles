@@ -40,7 +40,7 @@
     },
   },
   "cpu": {
-    "format": "| CPU {usage}% 󰍛",
+    "format": "CPU {usage}%",
     "on-click": "alacritty -e htop",
     "states": {
       "warning": 80,

@@ -17,5 +17,4 @@ sudo pacman -S --noconfirm \
   wiremix
 
 yay -S --noconfirm \
-  postman-bin \
-  spotify
+  postman-bin
