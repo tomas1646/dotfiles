@@ -9,6 +9,10 @@
   font-size: 12px;
 }
 
+tooltip {
+  background-color: #1a1b26;
+}
+
 .modules-left {
   margin-left: 8px;
 }

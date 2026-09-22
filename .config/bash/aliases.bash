@@ -23,3 +23,7 @@ alias erd="npx expo start --dev-client -c"
 ## Nuvia
 alias nds="pushd ~/nuvia/docker-containers && docker compose up -d && popd"
 alias ndstop="pushd ~/nuvia/docker-containers && docker compose stop && popd"
+
+# Eager
+alias eds="pushd ~/eager/docker-containers && docker compose up -d && popd"
+alias edstop="pushd ~/eager/docker-containers && docker compose stop && popd"

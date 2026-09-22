@@ -1,0 +1,50 @@
+#! /bin/bash
+#
+# tmux-master-layout.sh
+#
+# Splitea la ventana actual de tmux en 3 paneles:
+#   - Izquierda: corre el comando 1
+#   - Derecha arriba: corre el comando 2
+#   - Derecha abajo: corre el comando 3
+#
+# Uso:
+#   ./tmux-split3.sh "comando1" "comando2" "comando3"
+#
+# Requisito: tiene que ejecutarse DENTRO de una sesión de tmux.
+
+set -euo pipefail
+
+# --- Chequeo: tiene que estar corriendo dentro de tmux ---
+if [ -z "${TMUX:-}" ]; then
+    echo "Error: este script solo puede ejecutarse dentro de una sesión de tmux." >&2
+    exit 1
+fi
+
+# --- Chequeo: exactamente 3 argumentos ---
+if [ "$#" -ne 3 ]; then
+    echo "Uso: $0 \"comando1\" \"comando2\" \"comando3\"" >&2
+    exit 1
+fi
+
+CMD1="$1"
+CMD2="$2"
+CMD3="$3"
+
+# Directorio actual, para que los nuevos paneles arranquen en el mismo lugar
+CWD="$(tmux display-message -p '#{pane_current_path}')"
+
+# Pane actual = pane izquierdo (donde corre comando 1)
+LEFT_PANE="$(tmux display-message -p '#{pane_id}')"
+
+# Split vertical del window (dos paneles lado a lado): crea el pane derecho
+RIGHT_PANE="$(tmux split-window -h -c "$CWD" -P -F '#{pane_id}')"
+
+# En el pane derecho, split horizontal (arriba/abajo)
+# Al splitear desde RIGHT_PANE con -v, ese pane queda arriba y el nuevo queda abajo
+BOTTOM_RIGHT_PANE="$(tmux split-window -v -c "$CWD" -t "$RIGHT_PANE" -P -F '#{pane_id}')"
+TOP_RIGHT_PANE="$RIGHT_PANE"
+
+# Enviar cada comando a su pane correspondiente
+tmux send-keys -t "$LEFT_PANE" "$CMD1" C-m
+tmux send-keys -t "$TOP_RIGHT_PANE" "$CMD2" C-m
+tmux send-keys -t "$BOTTOM_RIGHT_PANE" "$CMD3" C-m

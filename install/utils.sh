@@ -18,6 +18,7 @@ sudo pacman -S --noconfirm \
   satty \
   stow \
   tmux \
-  udisks2
+  udisks2 \
+  unzip
 
 sudo systemctl enable cups.service
