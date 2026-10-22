@@ -11,6 +11,7 @@ sudo pacman -S --noconfirm \
   dmidecode \
   fastfetch \
   git \
+  github-cli \
   less \
   lsof \
   mise \

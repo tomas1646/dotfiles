@@ -24,7 +24,7 @@ hl.bind(mainMod .. " + F", hl.dsp.exec_cmd(fileManager), {
 hl.bind(mainMod .. " + D", hl.dsp.exec_cmd("discord"), {
   description = "Open Discord",
 })
-hl.bind(mainMod .. " + E", hl.dsp.exec_cmd("vivaldi-stable"), {
+hl.bind(mainMod .. " + E", hl.dsp.exec_cmd("vivaldi"), {
   description = "Open Vivaldi",
 })
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }, {
