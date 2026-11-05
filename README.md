@@ -3,7 +3,7 @@
 * **Shell**: Bash
 * **Editor**: Nvim
 * **Terminal**: Alacrity
-* **Multiplexer**: Tmux
+* **Multiplexer**: Herdr
 
 ## Install
 

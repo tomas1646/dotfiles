@@ -1,2 +1,2 @@
-# Tmux-sessionizer
-bind -x '"\C-f":"tmux-sessionizer"'
+# Herdr-sessionizer
+bind -x '"\C-f":"herdr-sessionizer"'
