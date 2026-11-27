@@ -18,8 +18,11 @@ sudo pacman -S --noconfirm \
   nvidia-open \
   satty \
   stow \
-  tmux \
   udisks2 \
   unzip
 
 sudo systemctl enable cups.service
+
+# HERDR TUI
+curl -fsSL https://herdr.dev/install.sh | sh
+
