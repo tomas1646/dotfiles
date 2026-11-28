@@ -1,0 +1,729 @@
+{
+  "title": "linux arch keybinds",
+  "rules": [
+    {
+      "description": "Linux arch keybinds",
+      "manipulators": [
+        {
+          "description": "Option + O -> Spotlight Search (Cmd + Space)",
+          "type": "basic",
+          "from": {
+            "key_code": "o",
+            "modifiers": {
+              "mandatory": ["option"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "spacebar",
+              "modifiers": ["left_command"]
+            }
+          ]
+        },
+        {
+          "description": "Ctrl + Shift + Right Command + H -> Option + Shift + Left Arrow (Select word back)",
+          "type": "basic",
+          "from": {
+            "key_code": "h",
+            "modifiers": {
+              "mandatory": ["right_command", "control", "shift"]
+            }
+          },
+          "to": [{ "key_code": "left_arrow", "modifiers": ["option", "shift"] }]
+        },
+        {
+          "description": "Ctrl + Shift + Right Command + J -> Option + Shift + Down Arrow",
+          "type": "basic",
+          "from": {
+            "key_code": "j",
+            "modifiers": {
+              "mandatory": ["right_command", "control", "shift"]
+            }
+          },
+          "to": [{ "key_code": "down_arrow", "modifiers": ["option", "shift"] }]
+        },
+        {
+          "description": "Ctrl + Shift + Right Command + K -> Option + Shift + Up Arrow",
+          "type": "basic",
+          "from": {
+            "key_code": "k",
+            "modifiers": {
+              "mandatory": ["right_command", "control", "shift"]
+            }
+          },
+          "to": [{ "key_code": "up_arrow", "modifiers": ["option", "shift"] }]
+        },
+        {
+          "description": "Ctrl + Shift + Right Command + L -> Option + Shift + Right Arrow (Select word forward)",
+          "type": "basic",
+          "from": {
+            "key_code": "l",
+            "modifiers": {
+              "mandatory": ["right_command", "control", "shift"]
+            }
+          },
+          "to": [
+            { "key_code": "right_arrow", "modifiers": ["option", "shift"] }
+          ]
+        },
+        {
+          "description": "Ctrl + Right Command + H -> Option + Left Arrow (Move word back)",
+          "type": "basic",
+          "from": {
+            "key_code": "h",
+            "modifiers": {
+              "mandatory": ["right_command", "control"]
+            }
+          },
+          "to": [{ "key_code": "left_arrow", "modifiers": ["option"] }]
+        },
+        {
+          "description": "Ctrl + Right Command + J -> Option + Down Arrow",
+          "type": "basic",
+          "from": {
+            "key_code": "j",
+            "modifiers": {
+              "mandatory": ["right_command", "control"]
+            }
+          },
+          "to": [{ "key_code": "down_arrow", "modifiers": ["option"] }]
+        },
+        {
+          "description": "Ctrl + Right Command + K -> Option + Up Arrow",
+          "type": "basic",
+          "from": {
+            "key_code": "k",
+            "modifiers": {
+              "mandatory": ["right_command", "control"]
+            }
+          },
+          "to": [{ "key_code": "up_arrow", "modifiers": ["option"] }]
+        },
+        {
+          "description": "Ctrl + Right Command + L -> Option + Right Arrow (Move word forward)",
+          "type": "basic",
+          "from": {
+            "key_code": "l",
+            "modifiers": {
+              "mandatory": ["right_command", "control"]
+            }
+          },
+          "to": [{ "key_code": "right_arrow", "modifiers": ["option"] }]
+        },
+        {
+          "description": "Right Command + H -> Left Arrow",
+          "type": "basic",
+          "from": {
+            "key_code": "h",
+            "modifiers": {
+              "mandatory": ["right_command"],
+              "optional": ["any"]
+            }
+          },
+          "to": [{ "key_code": "left_arrow" }]
+        },
+        {
+          "description": "Right Command + J -> Down Arrow",
+          "type": "basic",
+          "from": {
+            "key_code": "j",
+            "modifiers": {
+              "mandatory": ["right_command"],
+              "optional": ["any"]
+            }
+          },
+          "to": [{ "key_code": "down_arrow" }]
+        },
+        {
+          "description": "Right Command + K -> Up Arrow",
+          "type": "basic",
+          "from": {
+            "key_code": "k",
+            "modifiers": {
+              "mandatory": ["right_command"],
+              "optional": ["any"]
+            }
+          },
+          "to": [{ "key_code": "up_arrow" }]
+        },
+        {
+          "description": "Right Command + L -> Right Arrow",
+          "type": "basic",
+          "from": {
+            "key_code": "l",
+            "modifiers": {
+              "mandatory": ["right_command"],
+              "optional": ["any"]
+            }
+          },
+          "to": [{ "key_code": "right_arrow" }]
+        },
+        {
+          "description": "Command + , and . to Option + , and .",
+          "type": "basic",
+          "from": {
+            "key_code": "comma",
+            "modifiers": {
+              "mandatory": ["command"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "comma",
+              "modifiers": ["option"]
+            }
+          ]
+        },
+        {
+          "description": "Command + , and . to Option + , and .",
+          "type": "basic",
+          "from": {
+            "key_code": "period",
+            "modifiers": {
+              "mandatory": ["command"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "period",
+              "modifiers": ["option"]
+            }
+          ]
+        },
+        {
+          "description": "Shift + Ctrl + C -> Cmd + C",
+          "type": "basic",
+          "from": {
+            "key_code": "c",
+            "modifiers": {
+              "mandatory": ["control", "shift"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "c",
+              "modifiers": ["left_command"]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^com\\.apple\\.Terminal$",
+                "^io\\.alacritty$",
+                "^org\\.alacritty$"
+              ]
+            }
+          ]
+        },
+        {
+          "description": "Ctrl + C -> Cmd + C",
+          "type": "basic",
+          "from": {
+            "key_code": "c",
+            "modifiers": {
+              "mandatory": ["control"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "c",
+              "modifiers": ["left_command"]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.apple\\.Terminal$",
+                "^io\\.alacritty$",
+                "^org\\.alacritty$"
+              ]
+            }
+          ]
+        },
+        {
+          "description": "Shift + Ctrl + V -> Cmd + V",
+          "type": "basic",
+          "from": {
+            "key_code": "v",
+            "modifiers": {
+              "mandatory": ["control", "shift"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "v",
+              "modifiers": ["left_command"]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^com\\.apple\\.Terminal$",
+                "^io\\.alacritty$",
+                "^org\\.alacritty$"
+              ]
+            }
+          ]
+        },
+        {
+          "description": "Ctrl + V -> Cmd + V",
+          "type": "basic",
+          "from": {
+            "key_code": "v",
+            "modifiers": {
+              "mandatory": ["control"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "v",
+              "modifiers": ["left_command"]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.apple\\.Terminal$",
+                "^io\\.alacritty$",
+                "^org\\.alacritty$"
+              ]
+            }
+          ]
+        },
+        {
+          "description": "Ctrl + Z -> Cmd + Z (Undo, except in Terminal apps)",
+          "type": "basic",
+          "from": {
+            "key_code": "z",
+            "modifiers": {
+              "mandatory": ["control"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "z",
+              "modifiers": ["left_command"]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.apple\\.Terminal$",
+                "^io\\.alacritty$",
+                "^org\\.alacritty$"
+              ]
+            }
+          ]
+        },
+        {
+          "description": "Cmd + C -> Cmd + Option + Ctrl + C (Only in Vivaldi - Close Tab)",
+          "type": "basic",
+          "from": {
+            "key_code": "c",
+            "modifiers": {
+              "mandatory": ["command"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "c",
+              "modifiers": ["left_command", "left_option", "left_control"]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": ["^com\\.vivaldi\\.Vivaldi$"]
+            }
+          ]
+        },
+        {
+          "description": "Ctrl + F -> Cmd + F (Only in Vivaldi - Find)",
+          "type": "basic",
+          "from": {
+            "key_code": "f",
+            "modifiers": {
+              "mandatory": ["control"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f",
+              "modifiers": ["left_command"]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": ["^com\\.vivaldi\\.Vivaldi$"]
+            }
+          ]
+        },
+        {
+          "description": "Ctrl + R -> Cmd + R (Only in Vivaldi - Refresh page)",
+          "type": "basic",
+          "from": {
+            "key_code": "r",
+            "modifiers": {
+              "mandatory": ["control"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "r",
+              "modifiers": ["left_command"]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": ["^com\\.vivaldi\\.Vivaldi$"]
+            }
+          ]
+        },
+        {
+          "description": "Ctrl + K -> Cmd + K (Only in Vivaldi)",
+          "type": "basic",
+          "from": {
+            "key_code": "k",
+            "modifiers": {
+              "mandatory": ["control"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "k",
+              "modifiers": ["left_command"]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": ["^com\\.vivaldi\\.Vivaldi$"]
+            }
+          ]
+        },
+        {
+          "description": "Cmd + C -> Left Option + C (Only in Terminal apps - nvim <A-c>)",
+          "type": "basic",
+          "from": {
+            "key_code": "c",
+            "modifiers": {
+              "mandatory": ["command"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "c",
+              "modifiers": ["left_option"]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": ["^io\\.alacritty$", "^org\\.alacritty$"]
+            }
+          ]
+        },
+        {
+          "description": "Cmd + A -> Left Option + A (Only in Terminal apps - nvim <A-a>)",
+          "type": "basic",
+          "from": {
+            "key_code": "a",
+            "modifiers": {
+              "mandatory": ["command"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "a",
+              "modifiers": ["left_option"]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": ["^io\\.alacritty$", "^org\\.alacritty$"]
+            }
+          ]
+        },
+        {
+          "description": "Disable Command + H (Ignore hide window shortcut)",
+          "type": "basic",
+          "from": {
+            "key_code": "h",
+            "modifiers": {
+              "mandatory": ["command"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "vk_none"
+            }
+          ]
+        },
+        {
+          "description": "Ctrl+Backspace deletes the previous word.",
+          "type": "basic",
+          "from": {
+            "key_code": "delete_or_backspace",
+            "modifiers": {
+              "mandatory": ["control"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "delete_or_backspace",
+
+              "modifiers": ["left_option"]
+            }
+          ]
+        },
+        {
+          "description": "Ctrl + Plus -> Cmd + Plus (Only in Terminal apps)",
+          "type": "basic",
+          "from": {
+            "key_code": "equal_sign",
+            "modifiers": {
+              "mandatory": ["control"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "equal_sign",
+              "modifiers": ["left_command"]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^com\\.apple\\.Terminal$",
+                "^org\\.alacritty$",
+                "^com\\.vivaldi\\.Vivaldi$"
+              ]
+            }
+          ]
+        },
+        {
+          "description": "Ctrl + Minus -> Cmd + Minus (Only in Terminal apps)",
+          "type": "basic",
+          "from": {
+            "key_code": "hyphen",
+            "modifiers": {
+              "mandatory": ["control"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "hyphen",
+              "modifiers": ["left_command"]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^com\\.apple\\.Terminal$",
+                "^org\\.alacritty$",
+                "^com\\.vivaldi\\.Vivaldi$"
+              ]
+            }
+          ]
+        },
+        {
+          "description": "Disable Command + Space (Spotlight shortcut)",
+          "type": "basic",
+          "from": {
+            "key_code": "spacebar",
+            "modifiers": {
+              "mandatory": ["command"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "vk_none"
+            }
+          ]
+        },
+        {
+          "description": "Ctrl + Left Arrow -> Option + Left Arrow (Move word back)",
+          "type": "basic",
+          "from": {
+            "key_code": "left_arrow",
+            "modifiers": {
+              "mandatory": ["control"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "left_arrow",
+              "modifiers": ["option"]
+            }
+          ]
+        },
+        {
+          "description": "Ctrl + Right Arrow -> Option + Right Arrow (Move word forward)",
+          "type": "basic",
+          "from": {
+            "key_code": "right_arrow",
+            "modifiers": {
+              "mandatory": ["control"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "right_arrow",
+              "modifiers": ["option"]
+            }
+          ]
+        },
+        {
+          "description": "Ctrl + Up Arrow -> Option + Up Arrow",
+          "type": "basic",
+          "from": {
+            "key_code": "up_arrow",
+            "modifiers": {
+              "mandatory": ["control"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "up_arrow",
+              "modifiers": ["option"]
+            }
+          ]
+        },
+        {
+          "description": "Ctrl + Down Arrow -> Option + Down Arrow",
+          "type": "basic",
+          "from": {
+            "key_code": "down_arrow",
+            "modifiers": {
+              "mandatory": ["control"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "down_arrow",
+              "modifiers": ["option"]
+            }
+          ]
+        },
+        {
+          "description": "Ctrl + Shift + Left Arrow -> Option + Shift + Left Arrow (Select word back)",
+          "type": "basic",
+          "from": {
+            "key_code": "left_arrow",
+            "modifiers": {
+              "mandatory": ["control", "shift"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "left_arrow",
+              "modifiers": ["option", "shift"]
+            }
+          ]
+        },
+        {
+          "description": "Ctrl + Shift + Right Arrow -> Option + Shift + Right Arrow (Select word forward)",
+          "type": "basic",
+          "from": {
+            "key_code": "right_arrow",
+            "modifiers": {
+              "mandatory": ["control", "shift"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "right_arrow",
+              "modifiers": ["option", "shift"]
+            }
+          ]
+        },
+        {
+          "description": "Ctrl + Shift + Up Arrow -> Option + Shift + Up Arrow",
+          "type": "basic",
+          "from": {
+            "key_code": "up_arrow",
+            "modifiers": {
+              "mandatory": ["control", "shift"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "up_arrow",
+              "modifiers": ["option", "shift"]
+            }
+          ]
+        },
+        {
+          "description": "Ctrl + Shift + Down Arrow -> Option + Shift + Down Arrow",
+          "type": "basic",
+          "from": {
+            "key_code": "down_arrow",
+            "modifiers": {
+              "mandatory": ["control", "shift"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "down_arrow",
+              "modifiers": ["option", "shift"]
+            }
+          ]
+        },
+        {
+          "description": "Option + C -> Command + Q (Quit application)",
+          "type": "basic",
+          "from": {
+            "key_code": "c",
+            "modifiers": {
+              "mandatory": ["option"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "q",
+              "modifiers": ["left_command"]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": ["^io\\.alacritty$", "^org\\.alacritty$"]
+            }
+          ]
+        },
+        {
+          "description": "Shift + Enter -> Option + Enter (Only in Terminal apps - new line)",
+          "type": "basic",
+          "from": {
+            "key_code": "return_or_enter",
+            "modifiers": {
+              "mandatory": ["shift"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "return_or_enter",
+              "modifiers": ["left_option"]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": ["^io\\.alacritty$", "^org\\.alacritty$"]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

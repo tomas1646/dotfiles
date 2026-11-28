@@ -25,3 +25,4 @@ _darcs
 .gitignore
 install.sh
 install/*
+mac/*
